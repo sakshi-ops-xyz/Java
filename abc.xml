@@ -1,0 +1,807 @@
+
+<playerConfigurations>
+    <playerConfig displayDeviceId="tv4" dvcId="4" hotelId="1" roomNumber="1728">
+        <player type="channel">
+            <driverId>xplayer18simplenew</driverId>
+            <connection type="ip">
+                <ip>127.0.0.1</ip>
+                <port>9090</port>
+                <url/>
+            </connection>
+            <scripts>
+                <script type="start">
+                   &lt;params>
+                        <param>/bin/bash</param>
+                        <param>/digivalet/pkg/config/scripts/Xplayer</param>
+                        <param>start</param>
+                    </params>
+                </script>
+                <script type="stop">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/digivalet/pkg/config/scripts/Xplayer</param>
+                        <param>stop</param>
+                    </params>
+                </script>
+                <script type="status">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/digivalet/pkg/config/scripts/Xplayer</param>
+                        <param>status</param>
+                    </params>
+                </script>
+                <script type="iptvStatus">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/v_audiosub</param>
+                        <param>status</param>
+                    </params>
+                </script>
+                <script type="ENABLECLOSEDCAPTION">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/v_audiosub</param>
+                        <param>SetCap</param>
+                        <param>enable</param>
+                    </params>
+                </script>
+                <script type="DISABLECLOSEDCAPTION">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/v_audiosub</param>
+                        <param>SetCap</param>
+                        <param>disable</param>
+                    </params>
+                </script>
+                <script type="iptvFeedStatus">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>iptv-reload</param>
+                        <param>astatus</param>
+                        <param>IPTV</param>
+                        <param>/digivalet/pkg/config/tv/iptv.xml</param>
+                        <param>All</param>
+                    </params>
+                </script>
+                <script type="reload">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>iptv-reload</param>
+                        <param>astart</param>
+                        <param>IPTV</param>
+                        <param>/digivalet/pkg/config/tv/iptv.xml</param>
+                        <param>All</param>
+                    </params>
+                </script>
+                <script type="PLAYWMUSIC">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>WELCOMEMOOD</param>
+                        <param>launch</param>
+                        <param type="runtime">moodId</param>
+                        <param>http://127.0.0.1/w-mood/index.html</param>
+                        <param type="runtime">'guestName'</param>
+                    </params>
+                </script>
+                <script type="CHANGEWMUSICMOOD">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>WELCOMEMOOD</param>
+                        <param>changemood</param>
+                        <param type="runtime">moodId</param>
+                    </params>
+                </script>
+                <script type="UPDATEWMUSICMETADATA">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>WELCOMEMOOD</param>
+                        <param>updatemetadata</param>
+                        <param type="runtime">'title'</param>
+                        <param type="runtime">'subtitle'</param>
+                    </params>
+                </script>
+                <script type="UPDATEWMUSICGUESTDATA">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>WELCOMEMOOD</param>
+                        <param>updateguestdata</param>
+                        <param type="runtime">'guestName'</param>
+                    </params>
+                </script>
+                <script type="STOPWMUSIC">
+                    <params>
+                        <param>sudo</param>
+                        <param>systemctl</param>
+                        <param>stop</param>
+                        <param>welcome.service</param>
+                    </params>
+                </script>
+                <script type="SETTURNDOWN">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>welcome-launcher</param>
+                        <param type="runtime">https://vod.bvlgari-paris.digivalet.in/turndown/index.html?music_file_name=musicId</param>
+                        <!-- <param type="runtime">WELCOME_LETTER_URL</param> -->
+                    </params>
+                </script>
+                <script type="STOPTURNDOWN">
+                    <params>
+                        <param>sudo</param>
+                        <param>systemctl</param>
+                        <param>stop</param>
+                        <param>welcome.service</param>
+                    </params>
+                </script>
+                <script type="CURRENTREFRESHRATE">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/CurrentRefreshRate</param>
+                    </params>
+                </script>
+                <script type="SETREFRESHRATE">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/SetRefreshRate</param>
+                        <param type="runtime">refreshrate</param>
+                    </params>
+                </script>
+                <script type="STARTCHANNELSTREAM">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/STARTCHANNELSTREAM</param>
+                        <param type="runtime">channelUrl</param>
+                        <param type="runtime">destChannelUrl</param>
+                    </params>
+                </script>
+                <script type="ALERTCHANNEL">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/STARTCHANNELSTREAM</param>
+                        <param type="runtime">channelUrl</param>
+                        <param type="runtime">destChannelUrl</param>
+                    </params>
+                </script>
+                <!-- 		<script type="STARTCHANNELSTREAM"><params><param>/bin/bash</param><param>/usr/local/bin/STARTCHANNELSTREAM</param><param type="runtime">channelUrl</param><param type="runtime">destChannelUrl</param><param>enc</param></params></script>	-->
+                <!--			<script type="INITATTRIBUTES"><params><param>/bin/bash</param><param>/usr/local/bin/RESETATTRIBUTES</param></params></script>        -->
+                <!--		<script type="iptvFeedStatus"><params><param>/bin/bash</param><param>/usr/local/bin/generateM3u.sh</param></params></script><script type="reload"><params><param>/bin/bash</param><param>iptv-reload</param></params></script>	 -->
+            </scripts>
+            <vodSecurityServerIp>vod.bvlgari-paris.digivalet.in</vodSecurityServerIp>
+            <vodSecurityServerPort>10110</vodSecurityServerPort>
+            <vodPollingTime>5000</vodPollingTime>
+            <isEnableVodSecurity>true</isEnableVodSecurity>
+            <movieServerUrl>https://vod.bvlgari-paris.digivalet.in:18473/</movieServerUrl>
+            <!-- Below tag should be uncommented if movie security needs to be disabled  & above tags named vodSecurityServerIp,vodSecurityServerPort,vodPollingTime,isEnableVodSecurity,movieServerUrl should be commented out-->
+            <!--      <movieServerUrl>https://vod.bvlgari-paris.digivalet.in/movies/</movieServerUrl> -->
+            <sharedMediaServerURL>https://his.bvlgari-paris.digivalet.in/digivalet-api/assets/uploads/shareMedia/23451</sharedMediaServerURL>
+            <playlistFile>/digivalet/pkg/config/entertainment/channels.xml</playlistFile>
+            <channelPropertyFile>/digivalet/pkg/cache/channelProperties.xml</channelPropertyFile>
+            <channelListFetchUrl>https://his.bvlgari-paris.digivalet.in/dashboard/components/com_tvchannels/get_iptv_xml.php?</channelListFetchUrl>
+            <channelListFile>/digivalet/pkg/config/tv/iptv.xml</channelListFile>
+            <isEnabledChannelAudioStreamFromScript>false</isEnabledChannelAudioStreamFromScript>
+            <!--			<isNeedToPlayLastChannelAtTvOn>true</isNeedToPlayLastChannelAtTvOn><channelNumberToPlayAtOn>1</channelNumberToPlayAtOn>	-->
+        </player>
+        <player type="music">
+            <driverId>xplayer18simplenew</driverId>
+            <connection type="ip">
+                <ip>127.0.0.1</ip>
+                <port>9090</port>
+            </connection>
+            <playlistFile>/digivalet/pkg/config/entertainment/musicplaylist.xml</playlistFile>
+        </player>
+        <player type="movie">
+            <driverId>vplayer</driverId>
+            <connection type="ip">
+                <ip>127.0.0.1</ip>
+                <port>21501</port>
+            </connection>
+            <vodSecurityServerIp>vod.bvlgari-paris.digivalet.in</vodSecurityServerIp>
+            <vodSecurityServerPort>10110</vodSecurityServerPort>
+            <vodPollingTime>5000</vodPollingTime>
+            <isEnableVodSecurity>true</isEnableVodSecurity>
+            <!-- <movieServerUrl>https://vod.bvlgari-paris.digivalet.in:18473/</movieServerUrl><playlistFile>/digivalet/pkg/config/entertainment/channels.xml</playlistFile>-->
+        </player>
+        <player type="radio">
+            <driverId>MPLAYERVTUNER</driverId>
+            <connection type="ip">
+                <ip>127.0.0.1</ip>
+                <port>9090</port>
+            </connection>
+            <radioType>vtuner</radioType>
+            <radioServerURL/>
+            <scripts>
+                <script type="start">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/RADIO</param>
+                        <param>start</param>
+                        <param type="runtime">url</param>
+                    </params>
+                </script>
+                <script type="stop">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/RADIO</param>
+                        <param>stop</param>
+                    </params>
+                </script>
+                <script type="status">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/RADIO</param>
+                        <param>details</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="streamPlayer">
+            <driverId>digicast</driverId>
+            <connection type="ip">
+                <ip>127.0.0.1</ip>
+                <port>9090</port>
+            </connection>
+            <defaultSSID>Digicast</defaultSSID>
+            <digicastSSID>DigiCast-ROOM</digicastSSID>
+            <isNeedToGeneratePswd>true</isNeedToGeneratePswd>
+            <defaultPswd>digivalet</defaultPswd>
+            <guestContentStreamPropertyFile>/digivalet/pkg/cache/guestContentStreamProperties.xml</guestContentStreamPropertyFile>
+            <scripts>
+                <script type="enable">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/digicast</param>
+                        <param>ap</param>
+                        <param>on</param>
+                    </params>
+                </script>
+                <script type="disable">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/digicast</param>
+                        <param>ap</param>
+                        <param>off</param>
+                    </params>
+                </script>
+                <script type="setPswd">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/digicast</param>
+                        <param>pwd</param>
+                        <param>1</param>
+                        <param type="runtime">password</param>
+                        <!-- <param>/xdigivalet/pkg/config/scripts/DIGICAST </param><param>pwd 							1 </param><param type="runtime"> password</param> -->
+                    </params>
+                </script>
+                <script type="resetPswd">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/digicast</param>
+                        <param>pwd</param>
+                        <param>0</param>
+                        <param type="runtime">defaultpassword</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="youtube">
+            <driverId>youtube</driverId>
+            <connection type="none">
+                <ip>na</ip>
+                <port>na</port>
+            </connection>
+            <scripts>
+                <script type="start">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>youtube-launcher</param>
+                        <param type="runtime">http://www.youtube.com/watch?v=</param>
+                    </params>
+                </script>
+                <script type="stop">
+                    <params>
+                        <param>sudo</param>
+                        <param>systemctl</param>
+                        <param>stop</param>
+                        <param>youtube-pr.service</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="netflix">
+            <driverId>netflixnew</driverId>
+            <connection type="none">
+                <ip>na</ip>
+                <port>na</port>
+            </connection>
+            <isCursorEnabledAtLaunch>false</isCursorEnabledAtLaunch>
+            <isCursorEnabledAtSignIn>true</isCursorEnabledAtSignIn>
+            <scripts>
+                <script type="launch">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>NETFLIX</param>
+                        <param>Launch</param>
+                    </params>
+                </script>
+                <script type="signin">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>NETFLIX</param>
+                        <param>Signin</param>
+                    </params>
+                </script>
+                <script type="signout">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>NETFLIX</param>
+                        <param>Signout</param>
+                    </params>
+                </script>
+                <script type="forward">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>NETFLIX</param>
+                        <param>Forward</param>
+                    </params>
+                </script>
+                <script type="rewind">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>NETFLIX</param>
+                        <param>Rewind</param>
+                    </params>
+                </script>
+                <script type="cookiesremove">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>NETFLIX</param>
+                        <param>Cookiesremove</param>
+                    </params>
+                </script>
+                <script type="close">
+                    <params>
+                        <param>sudo</param>
+                        <param>systemctl</param>
+                        <param>stop</param>
+                        <param>netflix</param>
+                    </params>
+                </script>
+                <script type="selectusername">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>NETFLIX</param>
+                        <param>Username</param>
+                    </params>
+                </script>
+                <script type="selectpassword">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>NETFLIX</param>
+                        <param>Password</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="amazonprime">
+            <driverId>amazonprimenew</driverId>
+            <connection type="none">
+                <ip>na</ip>
+                <port>na</port>
+            </connection>
+            <!--      <isCursorEnabledAtLaunch>false</isCursorEnabledAtLaunch><isCursorEnabledAtSignIn>true</isCursorEnabledAtSignIn>-->
+            <scripts>
+                <script type="launch">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>AMAZONPRIME</param>
+                        <param>Launch</param>
+                    </params>
+                </script>
+                <script type="signin">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>AMAZONPRIME</param>
+                        <param>Signin</param>
+                    </params>
+                </script>
+                <script type="signout">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>AMAZONPRIME</param>
+                        <param>Signout</param>
+                    </params>
+                </script>
+                <script type="forward">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>AMAZONPRIME</param>
+                        <param>Forward</param>
+                    </params>
+                </script>
+                <script type="rewind">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>AMAZONPRIME</param>
+                        <param>Rewind</param>
+                    </params>
+                </script>
+                <script type="cookiesremove">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>AMAZONPRIME</param>
+                        <param>Cookiesremove</param>
+                    </params>
+                </script>
+                <script type="close">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/closefx.sh</param>
+                    </params>
+                </script>
+                <script type="selectusername">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>AMAZONPRIME</param>
+                        <param>Username</param>
+                    </params>
+                </script>
+                <script type="selectpassword">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>AMAZONPRIME</param>
+                        <param>Password</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="welcomeletter">
+            <driverId>welcomeletter</driverId>
+            <connection type="none">
+                <ip>na</ip>
+                <port>na</port>
+            </connection>
+            <scripts>
+                <script type="open">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>welcome-launcher</param>
+                        <param type="runtime"/>
+                        <!-- <param type="runtime">WELCOME_LETTER_URL</param> -->
+                    </params>
+                </script>
+                <script type="close">
+                    <params>
+                        <param>sudo</param>
+                        <param>systemctl</param>
+                        <param>stop</param>
+                        <param>welcome.service</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="hulu">
+            <driverId>hulunew</driverId>
+            <connection type="none">
+                <ip>na</ip>
+                <port>na</port>
+            </connection>
+            <!--           <isCursorEnabledAtLaunch>false</isCursorEnabledAtLaunch><isCursorEnabledAtSignIn>true</isCursorEnabledAtSignIn>-->
+            <scripts>
+                <script type="launch">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>HULU</param>
+                        <param>Launch</param>
+                    </params>
+                </script>
+                <script type="signin">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>HULU</param>
+                        <param>Signin</param>
+                    </params>
+                </script>
+                <script type="signout">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>HULU</param>
+                        <param>Signout</param>
+                    </params>
+                </script>
+                <script type="forward">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>HULU</param>
+                        <param>Forward</param>
+                    </params>
+                </script>
+                <script type="rewind">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>HULU</param>
+                        <param>Rewind</param>
+                    </params>
+                </script>
+                <script type="cookiesremove">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>HULU</param>
+                        <param>Cookiesremove</param>
+                    </params>
+                </script>
+                <script type="close">
+                    <params>
+                        <param>sudo</param>
+                        <param>systemctl</param>
+                        <param>stop</param>
+                        <param>hulu</param>
+                    </params>
+                </script>
+                <script type="selectusername">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>HULU</param>
+                        <param>Username</param>
+                    </params>
+                </script>
+                <script type="selectpassword">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>HULU</param>
+                        <param>Password</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="mediashare">
+            <driverId>xplayer18simplenew</driverId>
+            <connection type="ip">
+                <ip>127.0.0.1</ip>
+                <port>9090</port>
+            </connection>
+            <sharedMediaServerURL>na</sharedMediaServerURL>
+        </player>
+        <player type="youku">
+            <driverId>youku</driverId>
+            <connection type="none">
+                <ip>na</ip>
+                <port>na</port>
+            </connection>
+            <scripts>
+                <script type="launch">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>YOUKU</param>
+                        <param>Launch</param>
+                    </params>
+                </script>
+                <script type="signin">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>YOUKU</param>
+                        <param>Signin</param>
+                    </params>
+                </script>
+                <script type="signout">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>YOUKU</param>
+                        <param>Signout</param>
+                    </params>
+                </script>
+                <script type="forward">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>YOUKU</param>
+                        <param>Forward</param>
+                    </params>
+                </script>
+                <script type="rewind">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>YOUKU</param>
+                        <param>Rewind</param>
+                    </params>
+                </script>
+                <script type="cookiesremove">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>YOUKU</param>
+                        <param>Cookiesremove</param>
+                    </params>
+                </script>
+                <script type="close">
+                    <params>
+                        <param>sudo</param>
+                        <param>systemctl</param>
+                        <param>stop</param>
+                        <param>youku</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="iqiyi">
+            <driverId>iqiyi</driverId>
+            <connection type="none">
+                <ip>na</ip>
+                <port>na</port>
+            </connection>
+            <scripts>
+                <script type="launch">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>IQIYI</param>
+                        <param>Launch</param>
+                    </params>
+                </script>
+                <script type="signin">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>IQIYI</param>
+                        <param>Signin</param>
+                    </params>
+                </script>
+                <script type="signout">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>IQIYI</param>
+                        <param>Signout</param>
+                    </params>
+                </script>
+                <script type="forward">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>IQIYI</param>
+                        <param>Forward</param>
+                    </params>
+                </script>
+                <script type="rewind">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>IQIYI</param>
+                        <param>Rewind</param>
+                    </params>
+                </script>
+                <script type="cookiesremove">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>IQIYI</param>
+                        <param>Cookiesremove</param>
+                    </params>
+                </script>
+                <script type="close">
+                    <params>
+                        <param>sudo</param>
+                        <param>systemctl</param>
+                        <param>stop</param>
+                        <param>iqiyi</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="appletv">
+            <driverId>node</driverId>
+            <connection type="ip">
+                <ip>127.0.0.1</ip>
+                <port>8099</port>
+            </connection>
+            <movieServerUrl>http://vod/movies/</movieServerUrl>
+            <playlistFile>/digivalet/pkg/config/entertainment/channels.xml</playlistFile>
+        </player>
+        <player type="ticker">
+            <driverId>generic</driverId>
+            <connection type="ip">
+                <ip>127.0.0.1</ip>
+                <port>9090</port>
+            </connection>
+            <sharedMediaServerURL>na</sharedMediaServerURL>
+            <scripts>
+                <script type="launch">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/ticker.sh</param>
+                        <param>ON</param>
+                        <param type="runtime">fontSize</param>
+                        <param>100</param>
+                        <param>5000</param>
+                        <param type="runtime">transitionSpeed</param>
+                        <param type="runtime">"fontColor"</param>
+                        <param type="runtime">"backgroundColor"</param>
+                        <!--                        <param type="runtime">backgroundTransparency</param> -->
+                        <param>5</param>
+                        <param>y</param>
+                        <param type="runtime">description</param>
+                        <param type="runtime">url</param>
+                    </params>
+                </script>
+                <script type="stop">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>/usr/local/bin/ticker.sh</param>
+                        <param>OFF</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="disneyplus">
+            <driverId>disneyplus</driverId>
+            <connection type="none">
+                <ip>na</ip>
+                <port>na</port>
+            </connection>
+            <scripts>
+                <script type="launch">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>DISNEY</param>
+                        <param>Launch</param>
+                    </params>
+                </script>
+                <script type="signin">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>DISNEY</param>
+                        <param>Signin</param>
+                    </params>
+                </script>
+                <script type="signout">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>DISNEY</param>
+                        <param>Signout</param>
+                    </params>
+                </script>
+                <script type="forward">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>DISNEY</param>
+                        <param>Forward</param>
+                    </params>
+                </script>
+                <script type="rewind">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>DISNEY</param>
+                        <param>Rewind</param>
+                    </params>
+                </script>
+                <script type="cookiesremove">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>DISNEY</param>
+                        <param>Cookiesremove</param>
+                    </params>
+                </script>
+                <script type="close">
+                    <params>
+                        <param>sudo</param>
+                        <param>systemctl</param>
+                        <param>stop</param>
+                        <param>disney</param>
+                    </params>
+                </script>
+                <script type="selectusername">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>DISNEY</param>
+                        <param>Username</param>
+                    </params>
+                </script>
+                <script type="selectpassword">
+                    <params>
+                        <param>/bin/bash</param>
+                        <param>DISNEY</param>
+                        <param>Password</param>
+                    </params>
+                </script>
+            </scripts>
+        </player>
+        <player type="bluetooth">
+            <driverId>VISMESV2</driverId>
+            <connection type="ip">
+                <ip>127.0.0.1</ip>
+                <port>9090</port>
+            </connection>
+            <sharedMediaServerURL>na</sharedMediaServerURL>
+        </player>
+    </playerConfig>
+</playerConfigurations>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<school>
+    <students>
+        <student>
+            <name>Sakshi</name>
+            <roll>1</roll>
+        </student>
+        <student>
+            <name>Aditya</name>
+            <roll>2</roll>
+        </student>
+    </students>
+    <categories>
+        <category>
+            <key>Fruits</key>
+            <value>
+                <item>Apple</item>
+                <item>Banana</item>
+            </value>
+        </category>
+        <category>
+            <key>Vegetables</key>
+            <value>
+                <item>Carrot</item>
+                <item>Cabbage</item>
+            </value>
+        </category>
+    </categories>
+</school>

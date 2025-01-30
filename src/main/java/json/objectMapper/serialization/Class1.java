@@ -1,7 +1,7 @@
 package json.objectMapper.serialization;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -35,6 +35,7 @@ public class Class1 {
 
         // Java object to Json
         ObjectMapper objectMapper=new ObjectMapper();
+//        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
 
@@ -63,13 +64,12 @@ public class Class1 {
         }
 
         // 4. Json Output Stream
+        System.out.println("\n\n");
         try (FileOutputStream outputStream = new FileOutputStream("output.json")) {
-            objectMapper.writeValue(outputStream, s1);
+            objectMapper.writeValue(System.out, s1);
             System.out.println("JSON written to file successfully.");
         } catch (IOException e) {
             System.out.println(e);
         }
-
-
     }
 }

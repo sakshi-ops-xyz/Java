@@ -1,0 +1,236 @@
+{
+  "serviceName": "javabutler",
+  "version": "",
+  "configurations": {
+    "serverConfig": [
+      {
+        "vendor": "gest",
+        "serverDetails": [
+          {
+            "serverConfigurations": [
+              {
+                "rmsConfig": {
+                  "relayAddress": "123",
+                  "buttonId": "5ce676620b297200116d217b",
+                  "buttonName": "Table15",
+                  "serviceMenuItemId": ""
+                },
+                "location": "Table15"
+              }
+            ],
+            "serverConnectionDetails": {
+              "port": "7060",
+              "deviceIp": "http://172.25.0.124",
+              "email": "admin@my-gest.com",
+              "password": "gest1234",
+              "domain": "my-gest",
+              "websocketPath": "5ce676620b297200116d217b"
+            }
+          }
+        ]
+      },
+      {
+        "vendor": "vmax",
+        "serverDetails": [
+          {
+            "serverConfigurations": [
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "9",
+                  "buttonId": ""
+                },
+                "location": "303",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "1",
+                  "buttonId": ""
+                },
+                "location": "304",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "7",
+                  "buttonId": ""
+                },
+                "location": "302",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "3",
+                  "buttonId": ""
+                },
+                "location": "305",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "5",
+                  "buttonId": ""
+                },
+                "location": "301",
+                "isButlerFeatureWithoutDvc": "false"
+              }
+            ],
+            "serverConnectionDetails": {
+              "port": "20108",
+              "deviceIp": "172.17.80.2",
+              "deviceName": ""
+            }
+          },
+          {
+            "serverConfigurations": [
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "3",
+                  "buttonId": ""
+                },
+                "location": "902",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "5",
+                  "buttonId": ""
+                },
+                "location": "903",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "9",
+                  "buttonId": ""
+                },
+                "location": "904",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "11",
+                  "buttonId": ""
+                },
+                "location": "905",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "1",
+                  "buttonId": ""
+                },
+                "location": "906",
+                "isButlerFeatureWithoutDvc": "false"
+              }
+            ],
+            "serverConnectionDetails": {
+              "port": "20108",
+              "deviceIp": "172.17.80.1",
+              "deviceName": ""
+            }
+          },
+          {
+            "serverConfigurations": [
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "11",
+                  "buttonId": ""
+                },
+                "location": "1901",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "7",
+                  "buttonId": ""
+                },
+                "location": "1902",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "9",
+                  "buttonId": ""
+                },
+                "location": "1903",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "5",
+                  "buttonId": ""
+                },
+                "location": "1904",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "3",
+                  "buttonId": ""
+                },
+                "location": "1905",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "1",
+                  "buttonId": ""
+                },
+                "location": "1906",
+                "isButlerFeatureWithoutDvc": "false"
+              }
+            ],
+            "serverConnectionDetails": {
+              "port": "20108",
+              "deviceIp": "172.17.80.3",
+              "deviceName": ""
+            }
+          }
+        ]
+      },
+      {
+        "vendor": "vlora",
+        "serverDetails": [
+          {
+            "serverConfigurations": [
+              {
+                "rmsConfig": {
+                  "relayAddress": "1234",
+                  "buttonId": "5ce676620b297200116d217b",
+                  "buttonName": "D1000021",
+                  "serviceMenuItemId": ""
+                },
+                "location": "106"
+              }
+            ],
+            "serverConnectionDetails": {
+              "port": "",
+              "deviceIp": "",
+              "email": "",
+              "password": "",
+              "domain": "",
+              "websocketPath": ""
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
