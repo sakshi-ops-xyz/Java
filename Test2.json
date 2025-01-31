@@ -1,0 +1,12 @@
+{
+  "id": 12345,
+  "name": "Alice",
+  "email": "alice@example.com",
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "zipcode": "10001"
+  },
+  "skills": ["Java", "Python", "JavaScript"],
+  "active": true
+}

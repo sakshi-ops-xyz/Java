@@ -1,276 +1,236 @@
 {
-  "status": true,
-  "message": "success",
-  "data": {
-    "dvcResponse": null,
-    "fnbResponse": {
-      "fnb": {
-        "topOrderedItems": [
+  "serviceName": "javabutler",
+  "version": "",
+  "configurations": {
+    "serverConfig": [
+      {
+        "vendor": "gest",
+        "serverDetails": [
           {
-            "menuItemId": 17,
-            "name": "null",
-            "asset": "null",
-            "quantity": 10
-          },
-          {
-            "menuItemId": 99,
-            "name": "Four Sigmatic Coffee",
-            "asset": "[{\"id\": 239, \"type\": \"image/png\", \"url\": \"https://butler-gateway-digivalet.pif.gov.sa/gateway/asset/Four%20Sigmatic%20Coffee202303100719.png\", \"is_default\": true}]",
-            "quantity": 8
-          },
-          {
-            "menuItemId": 94,
-            "name": "Strawberries",
-            "asset": "[{\"id\": 234, \"type\": \"image/png\", \"url\": \"https://butler-gateway-digivalet.pif.gov.sa/gateway/asset/Strawberry%20Bowl202303100657.png\", \"is_default\": true}]",
-            "quantity": 3
-          }
-        ],
-        "leastOrderedItems": [
-          {
-            "menuItemId": 94,
-            "name": "Strawberries",
-            "asset": "[{\"id\": 234, \"type\": \"image/png\", \"url\": \"https://butler-gateway-digivalet.pif.gov.sa/gateway/asset/Strawberry%20Bowl202303100657.png\", \"is_default\": true}]",
-            "quantity": 3
-          },
-          {
-            "menuItemId": 99,
-            "name": "Four Sigmatic Coffee",
-            "asset": "[{\"id\": 239, \"type\": \"image/png\", \"url\": \"https://butler-gateway-digivalet.pif.gov.sa/gateway/asset/Four%20Sigmatic%20Coffee202303100719.png\", \"is_default\": true}]",
-            "quantity": 8
-          },
-          {
-            "menuItemId": 17,
-            "name": "null",
-            "asset": "null",
-            "quantity": 10
-          }
-        ],
-        "totalOrders": 21,
-        "requestFulfillment": [
-          {
-            "time": "5 Minutes",
-            "count": 3
-          },
-          {
-            "time": "10 Minutes",
-            "count": 1
-          }
-        ],
-        "maxRequestsInADay": {
-          "quantity": 10,
-          "dates": [
-            "2024-11-13"
-          ]
-        },
-        "favouritesOrdersCount": 9,
-        "realTimeOrders": [
-          {
-            "state": "ORDERED",
-            "items": [
+            "serverConfigurations": [
               {
-                "menuItemId": 17,
-                "name": "null",
-                "asset": "null",
-                "quantity": 9
-              },
-              {
-                "menuItemId": 94,
-                "name": "Strawberries",
-                "asset": "[{\"id\": 234, \"type\": \"image/png\", \"url\": \"https://butler-gateway-digivalet.pif.gov.sa/gateway/asset/Strawberry%20Bowl202303100657.png\", \"is_default\": true}]",
-                "quantity": 1
-              },
-              {
-                "menuItemId": 99,
-                "name": "Four Sigmatic Coffee",
-                "asset": "[{\"id\": 239, \"type\": \"image/png\", \"url\": \"https://butler-gateway-digivalet.pif.gov.sa/gateway/asset/Four%20Sigmatic%20Coffee202303100719.png\", \"is_default\": true}]",
-                "quantity": 7
+                "rmsConfig": {
+                  "relayAddress": "123",
+                  "buttonId": "5ce676620b297200116d217b",
+                  "buttonName": "Table15",
+                  "serviceMenuItemId": ""
+                },
+                "location": "Table15"
               }
             ],
-            "count": 3
-          },
-          {
-            "state": "IN_PROGRESS",
-            "items": [],
-            "count": 0
-          },
-          {
-            "state": "CANCELLED",
-            "items": [],
-            "count": 0
-          },
-          {
-            "state": "REJECTED",
-            "items": [],
-            "count": 0
-          },
-          {
-            "state": "ACKNOWLEDGED",
-            "items": [],
-            "count": 0
-          },
-          {
-            "state": "PREPARING",
-            "items": [],
-            "count": 0
-          },
-          {
-            "state": "DISPATCH",
-            "items": [],
-            "count": 0
-          },
-          {
-            "state": "DELIVERED",
-            "items": [
-              {
-                "menuItemId": 94,
-                "name": "Strawberries",
-                "asset": "[{\"id\": 234, \"type\": \"image/png\", \"url\": \"https://butler-gateway-digivalet.pif.gov.sa/gateway/asset/Strawberry%20Bowl202303100657.png\", \"is_default\": true}]",
-                "quantity": 2
-              },
-              {
-                "menuItemId": 99,
-                "name": "Four Sigmatic Coffee",
-                "asset": "[{\"id\": 239, \"type\": \"image/png\", \"url\": \"https://butler-gateway-digivalet.pif.gov.sa/gateway/asset/Four%20Sigmatic%20Coffee202303100719.png\", \"is_default\": true}]",
-                "quantity": 1
-              }
-            ],
-            "count": 2
-          },
-          {
-            "state": "COMPLETED",
-            "items": [
-              {
-                "menuItemId": 17,
-                "name": "null",
-                "asset": "null",
-                "quantity": 1
-              }
-            ],
-            "count": 1
+            "serverConnectionDetails": {
+              "port": "7060",
+              "deviceIp": "http://172.25.0.124",
+              "email": "admin@my-gest.com",
+              "password": "gest1234",
+              "domain": "my-gest",
+              "websocketPath": "5ce676620b297200116d217b"
+            }
           }
-        ],
-        "averageDeliveryTime": "5 minutes"
+        ]
       },
-      "services": {
-        "topOrderedItems": [
+      {
+        "vendor": "vmax",
+        "serverDetails": [
           {
-            "menuItemId": 56,
-            "name": "null",
-            "asset": "null",
-            "quantity": 9
-          },
-          {
-            "menuItemId": 83,
-            "name": "clean room",
-            "asset": "",
-            "quantity": 7
-          },
-          {
-            "menuItemId": 82,
-            "name": "call water bottle",
-            "asset": "",
-            "quantity": 3
-          }
-        ],
-        "leastOrderedItems": [
-          {
-            "menuItemId": 82,
-            "name": "call water bottle",
-            "asset": "",
-            "quantity": 3
-          },
-          {
-            "menuItemId": 83,
-            "name": "clean room",
-            "asset": "",
-            "quantity": 7
-          },
-          {
-            "menuItemId": 56,
-            "name": "null",
-            "asset": "null",
-            "quantity": 9
-          }
-        ],
-        "totalOrders": 19,
-        "requestFulfillment": [
-          {
-            "time": "5 Minutes",
-            "count": 3
-          },
-          {
-            "time": "10 Minutes",
-            "count": 1
-          }
-        ],
-        "maxRequestsInADay": {
-          "quantity": 6,
-          "dates": [
-            "2024-11-07"
-          ]
-        },
-        "realTimeOrders": [
-          {
-            "state": "OPEN",
-            "items": [
+            "serverConfigurations": [
               {
-                "menuItemId": 56,
-                "name": "null",
-                "asset": "null",
-                "quantity": 5
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "9",
+                  "buttonId": ""
+                },
+                "location": "303",
+                "isButlerFeatureWithoutDvc": "false"
               },
               {
-                "menuItemId": 82,
-                "name": "call water bottle",
-                "asset": "",
-                "quantity": 2
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "1",
+                  "buttonId": ""
+                },
+                "location": "304",
+                "isButlerFeatureWithoutDvc": "false"
               },
               {
-                "menuItemId": 83,
-                "name": "clean room",
-                "asset": "",
-                "quantity": 5
-              }
-            ],
-            "count": 3
-          },
-          {
-            "state": "ACKNOWLEDGED",
-            "items": [
-              {
-                "menuItemId": 82,
-                "name": "call water bottle",
-                "asset": "",
-                "quantity": 1
-              }
-            ],
-            "count": 1
-          },
-          {
-            "state": "CLOSED",
-            "items": [
-              {
-                "menuItemId": 56,
-                "name": "null",
-                "asset": "null",
-                "quantity": 4
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "7",
+                  "buttonId": ""
+                },
+                "location": "302",
+                "isButlerFeatureWithoutDvc": "false"
               },
               {
-                "menuItemId": 83,
-                "name": "clean room",
-                "asset": "",
-                "quantity": 2
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "3",
+                  "buttonId": ""
+                },
+                "location": "305",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "5",
+                  "buttonId": ""
+                },
+                "location": "301",
+                "isButlerFeatureWithoutDvc": "false"
               }
             ],
-            "count": 2
+            "serverConnectionDetails": {
+              "port": "20108",
+              "deviceIp": "172.17.80.2",
+              "deviceName": ""
+            }
+          },
+          {
+            "serverConfigurations": [
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "3",
+                  "buttonId": ""
+                },
+                "location": "902",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "5",
+                  "buttonId": ""
+                },
+                "location": "903",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "9",
+                  "buttonId": ""
+                },
+                "location": "904",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "11",
+                  "buttonId": ""
+                },
+                "location": "905",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "1",
+                  "buttonId": ""
+                },
+                "location": "906",
+                "isButlerFeatureWithoutDvc": "false"
+              }
+            ],
+            "serverConnectionDetails": {
+              "port": "20108",
+              "deviceIp": "172.17.80.1",
+              "deviceName": ""
+            }
+          },
+          {
+            "serverConfigurations": [
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "11",
+                  "buttonId": ""
+                },
+                "location": "1901",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "7",
+                  "buttonId": ""
+                },
+                "location": "1902",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "9",
+                  "buttonId": ""
+                },
+                "location": "1903",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "5",
+                  "buttonId": ""
+                },
+                "location": "1904",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "3",
+                  "buttonId": ""
+                },
+                "location": "1905",
+                "isButlerFeatureWithoutDvc": "false"
+              },
+              {
+                "rmsConfig": {
+                  "address": "",
+                  "relayAddress": "1",
+                  "buttonId": ""
+                },
+                "location": "1906",
+                "isButlerFeatureWithoutDvc": "false"
+              }
+            ],
+            "serverConnectionDetails": {
+              "port": "20108",
+              "deviceIp": "172.17.80.3",
+              "deviceName": ""
+            }
           }
-        ],
-        "averageDeliveryTime": "10 minutes"
+        ]
+      },
+      {
+        "vendor": "vlora",
+        "serverDetails": [
+          {
+            "serverConfigurations": [
+              {
+                "rmsConfig": {
+                  "relayAddress": "1234",
+                  "buttonId": "5ce676620b297200116d217b",
+                  "buttonName": "D1000021",
+                  "serviceMenuItemId": ""
+                },
+                "location": "106"
+              }
+            ],
+            "serverConnectionDetails": {
+              "port": "",
+              "deviceIp": "",
+              "email": "",
+              "password": "",
+              "domain": "",
+              "websocketPath": ""
+            }
+          }
+        ]
       }
-    },
-    "ipadResponse": null
-  },
-  "errorData": null,
-  "display_message": "iPad details fetched successfully",
-  "response_code": 201
+    ]
+  }
 }

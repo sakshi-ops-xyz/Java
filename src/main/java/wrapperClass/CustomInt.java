@@ -1,9 +1,8 @@
 package wrapperClass;
 
-public class CustomInt {
-
-    private Object val;
-    public CustomInt(Object val) {
+public class CustomInt<Integer> {
+    private Integer val;
+    public CustomInt(Integer val) {
         if(val == null) this.val=null;
         else if((int)val < 1 || (int)val > 9) {
             throw new IllegalArgumentException();
@@ -20,12 +19,27 @@ class Main {
     public static void main(String[] args) {
         CustomInt i=new CustomInt(null);
         i.println();
-
         CustomInt i2=new CustomInt(8);
         i2.println();
 
-        CustomInt i3=new CustomInt(10);
-        i3.println();
-
+        try {
+            CustomInt i3=new CustomInt(10);
+            i3.println();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
