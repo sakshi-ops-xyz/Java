@@ -6,18 +6,18 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 public class Data {
     private String dvcResponse;
     private String ipadResponse;
-//    private FnbResponse fnbResponse;
+    private FnbResponse fnbResponse;
 
     public Data() {
     }
 
-//    public FnbResponse getFnbResponse() {
-//        return fnbResponse;
-//    }
-//
-//    public void setFnbResponse(FnbResponse fnbResponse) {
-//        this.fnbResponse = fnbResponse;
-//    }
+    public FnbResponse getFnbResponse() {
+        return fnbResponse;
+    }
+
+    public void setFnbResponse(FnbResponse fnbResponse) {
+        this.fnbResponse = fnbResponse;
+    }
 
     public String getIpadResponse() {
         return ipadResponse;
