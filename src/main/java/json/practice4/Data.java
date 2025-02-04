@@ -40,7 +40,7 @@ public class Data {
         return "Data{" +
                 "dvcResponse='" + dvcResponse + '\'' +
                 ", ipadResponse='" + ipadResponse + '\'' +
-//                ", fnbResponse=" + fnbResponse +
+                ", fnbResponse=" + fnbResponse +
                 '}';
     }
 }

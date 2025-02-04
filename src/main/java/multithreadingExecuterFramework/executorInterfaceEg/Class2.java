@@ -10,8 +10,6 @@ public class Class2 {
 //        Executor executor=Executors.newSingleThreadExecutor();
         Executor executor=Executors.newScheduledThreadPool(2);
 
-
-
         for(int i=0; i<8; i++) {
             int taskId=i;
             executor.execute(() -> {

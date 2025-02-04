@@ -1,0 +1,8 @@
+<playerConfigurations>
+    <playerConfig>
+        <player>
+<!--            <driverId></driverId>-->
+                <ip>127.0.0.1</ip>
+        </player>
+    </playerConfig>
+</playerConfigurations>

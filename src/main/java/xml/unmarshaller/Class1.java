@@ -22,8 +22,8 @@ import javax.xml.bind.Unmarshaller;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 class School {
-    private List<Student> students = new ArrayList<>();
-    private List<Category> categories = new ArrayList<>();
+    private final List<Student> students = new ArrayList<>();
+    private final List<Category> categories = new ArrayList<>();
 
     @XmlElementWrapper(name="students")
     @XmlElement(name="student")
@@ -57,7 +57,7 @@ class Student {
 @XmlAccessorType(XmlAccessType.FIELD)
 class Category {
     private String key;
-    private List<String> value = new ArrayList<>();
+    private final List<String> value = new ArrayList<>();
 
     public Category() {} // Required for JAXB
 

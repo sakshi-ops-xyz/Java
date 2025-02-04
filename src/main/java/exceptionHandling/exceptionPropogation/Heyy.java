@@ -2,7 +2,7 @@ package exceptionHandling.exceptionPropogation;
 
 public class Heyy {
 
-    public void a() {
+    public void a() /*throws Exception*/{
         throw new RuntimeException();
     }
 

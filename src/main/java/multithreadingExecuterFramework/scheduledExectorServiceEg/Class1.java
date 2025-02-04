@@ -17,6 +17,7 @@ public class Class1 {
             System.out.println("Task executed at fixed-rate");
         }, 0, 3, TimeUnit.SECONDS);
 
+
         for(int i=0; i<4; i++) {
             int taskId=i;
             executor.execute(() -> {
