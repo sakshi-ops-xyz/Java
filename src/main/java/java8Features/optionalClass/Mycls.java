@@ -5,8 +5,8 @@ import java.util.Optional;
 public class Mycls {
     public static Optional<String> getName() {
         String name="Sam";
-        return Optional.ofNullable(null);      // ofNullable()  (if know that the return value can be null)
-//        return Optional.of(name);
+        return Optional.ofNullable(null);      // ofNullable()  (if know that the return value can be null)                             //        return Optional.of(name);
+
     }
     public static void main(String[] args) {
         Optional<String> s=getName();

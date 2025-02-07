@@ -12,10 +12,12 @@ public class A {
     static StringBuilder s2=new StringBuilder();
     static Scanner sc=new Scanner(System.in);
 
-    public static void main(String[] args) {
+    static {
         l.add(10);
         l.add(20);
+    }
 
+    public static void main(String[] args) {
         StringBuilder s3=new StringBuilder("Hello");
         s2=s3;
 
@@ -27,5 +29,7 @@ public class A {
 
 //        B.main(null);
 //        int x=sc.nextInt();
+
+while(true) {}
     }
 }

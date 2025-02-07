@@ -1,9 +1,6 @@
 package sockets.multipleClient5;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
@@ -66,15 +63,14 @@ class UIThread extends Thread {
     @Override
     public void run() {
         Scanner sc=new Scanner(System.in);
-        int choice=0;
 
         while(true) {
             System.out.println("1. Chat Application.\n2. Broad-casting to clients.\n3. Uni-casting to particular client.\n4. Close server.");
             System.out.print("Select an option (1-4) : ");
 
-            choice=sc.nextInt();
+            MyServer.choice=sc.nextInt();
 
-            switch (choice) {
+            switch (MyServer.choice) {
                 case 1:
                     //                Logic logic=new Logic(clientId, socket);
 //                logic.start();
@@ -89,6 +85,7 @@ class UIThread extends Thread {
                     System.out.println("3");
                     break;
                 case 4:
+                    System.out.println("Invalid input!");
                     break;
             }
         }
@@ -101,6 +98,8 @@ class ServerThread extends Thread {
 
     @Override
     public void run() {
+        DataOutputStream dataOutputStream=null;
+
         ServerSocket serverSocket=null;
         Socket socket=null;
         int clientId=1;
@@ -113,6 +112,10 @@ class ServerThread extends Thread {
                 socket=serverSocket.accept();
                 MyServer.myMap.put(clientId, socket);
                 System.out.println("Connected");
+
+                dataOutputStream=new DataOutputStream(socket.getOutputStream());
+                dataOutputStream.writeInt(MyServer.choice);
+
 //                Logic logic=new Logic(clientId, socket);
 //                logic.start();
 //                clientId++;
@@ -127,6 +130,8 @@ class ServerThread extends Thread {
 
 public class MyServer {
     public static Map<Integer, Socket> myMap = new HashMap<>();
+    public static Map<Integer, Thread> myMap2 = new HashMap<>();   // for storing logic threads
+    static int choice;
 
     public static void main(String[] args) {
         ServerThread serverThread=new ServerThread();

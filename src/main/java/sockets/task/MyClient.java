@@ -34,8 +34,8 @@ public class MyClient {
 
         } catch (IOException e) {
             System.out.println(e);
+        } finally {
+            if(socket.isClosed()) System.out.println("true");
         }
-
-
     }
 }

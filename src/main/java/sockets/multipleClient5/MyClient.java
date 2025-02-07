@@ -3,25 +3,19 @@ package sockets.multipleClient5;
 // Broadcasting a msg to other clientssss using sep threads for input and output
 // Unicasting to a client
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
 class Print extends Thread {
     private Socket socket;
-
     public Print(Socket socket) {
         this.socket=socket;
     }
-
     @Override
     public void run() {
         Scanner sc=new Scanner(System.in);
         PrintWriter printWriter=null;
-
         try {
             printWriter=new PrintWriter(socket.getOutputStream(), true);
             while(true) {
@@ -37,22 +31,17 @@ class Print extends Thread {
         } finally {
             if(printWriter!= null) printWriter.close();
         }
-
     }
 }
 
 class Writer extends Thread {
     private Socket socket;
-
     public Writer(Socket socket) {
         this.socket=socket;
-
     }
-
     @Override
     public void run() {
         BufferedReader bufferedReader=null;
-
         try {
             bufferedReader=new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
@@ -74,28 +63,45 @@ class Writer extends Thread {
     }
 }
 
-public class MyClient {
-    public static void main(String[] args) {
-        Socket socket=null;
-
+class ChattingApp extends Thread {
+    Socket socket;
+    public ChattingApp(Socket socket) {
+        this.socket=socket;
+    }
+    @Override
+    public void run() {
+        System.out.println("----Connected with the chatting application, Type EXIT to exit----");
         try {
-            System.out.println("Sending connection req to server ...");
-            socket=new Socket("localhost", 9806);
-            System.out.println("----Connected with the chatting application, Type EXIT to exit----");
-
-            Print print=new Print(socket);
-            Writer write=new Writer(socket);
+            Print print = new Print(socket);
+            Writer write = new Writer(socket);
             print.start();
             write.start();
 
-//            while(true) {}
-            // main thread will wait until the below threads have completed their tasks
-            print.join();
             write.join();
+            print.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+
+public class MyClient {
+    public static void main(String[] args) {
+        Socket socket=null;
+        try {
+            System.out.println("Sending connection req to server ...");
+            socket=new Socket("localhost", 9806);
+
+            while (true) {
+                DataInputStream dataInputStream=new DataInputStream(socket.getInputStream());
+                if(dataInputStream.readInt() == 1) {
+                    ChattingApp chattingApp=new ChattingApp(socket);
+                    chattingApp.start();
+                }
+            }
+
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
             try {

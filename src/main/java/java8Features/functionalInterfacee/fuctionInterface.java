@@ -7,8 +7,11 @@ public class fuctionInterface {
         Function<String, Integer> f1= s -> s.length();
         Function<Integer, Integer> f2= s -> s*2;
 
+        Function<Integer, Integer> f34= s -> s*2;
+
+
         // apply method (abstract method)
-//        System.out.println(f1.apply("Hello"));
+        System.out.println(f1.apply("Hello"));
 
         // andThen() and compose() methods (default method)
         Function<String, Integer> f3=f1.andThen(f2);
