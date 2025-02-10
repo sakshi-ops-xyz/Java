@@ -45,7 +45,7 @@ public class StreamEg {
         );
 
 
-        List<Integer> l=t.stream().flatMap(List::stream).collect(Collectors.toList());
+        List<Integer> l=t.stream().flatMap(Collection::stream).collect(Collectors.toList());
         System.out.println(l);
 
 
